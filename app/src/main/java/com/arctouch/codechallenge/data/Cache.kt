@@ -2,11 +2,8 @@ package com.arctouch.codechallenge.data
 
 import com.arctouch.codechallenge.model.Genre
 
-object Cache {
+interface Cache {
+    fun cacheGenres(genres: List<Genre>)
+    fun getGenres(): List<Genre>
 
-    var genres = listOf<Genre>()
-
-    fun cacheGenres(genres: List<Genre>) {
-        this.genres = genres
-    }
 }
